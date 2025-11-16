@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cornelius Aurelius – Fitness Equilibrium</title>
 
-<meta name="theme-color" content="#000000" />
-<meta name="description" content="Cornelius Aurelius – Fitness Equilibrium. Cinematic vertical hero, auto-play reels, tap-to-enable-sound, minimal high-status design." />
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Cornelius Aurelius – Fitness Equilibrium. Cinematic reels, fast-loading, tap-to-enable-sound hero, elite masculine minimal design.">
 
 <style>
 /* RESET */
@@ -18,126 +18,151 @@ html,body{
  overflow-x:hidden;
 }
 
-/* TOP INSTAGRAM BAR */
-.topbar{
- position:fixed;
- top:0;left:0;
+/* NAME */
+.namebar{
  width:100%;
- padding:12px 20px;
- background:rgba(0,0,0,0.55);
- backdrop-filter:blur(10px);
- z-index:9999;
- border-bottom:1px solid #0a0a0a;
-}
-.topbar a{
- color:#00aaff;
- font-size:1.15rem;
+ text-align:center;
+ margin-top:18px;
+ font-size:1.9rem;
  font-weight:bold;
- text-decoration:none;
+ letter-spacing:3px;
+ color:#fff;
 }
 
-/* HERO SECTION */
+/* INSTAGRAM BUTTON */
+.ig-btn{
+ text-align:center;
+ margin-top:6px;
+}
+.ig-btn a{
+ color:#00aaff;
+ text-decoration:none;
+ padding:6px 14px;
+ font-size:1.1rem;
+ border:1px solid #00aaff55;
+ border-radius:8px;
+}
+
+/* HERO */
 .hero{
- margin-top:60px;
- position:relative;
- height:100vh;
- width:100%;
+ margin-top:20px;
+ height:88vh;
  display:flex;
  justify-content:center;
  align-items:center;
+ position:relative;
  overflow:hidden;
 }
 
-/* VERTICAL HERO VIDEO */
 .hero video{
  height:88vh;
  width:auto;
  object-fit:contain;
- border-radius:20px;
+ border-radius:18px;
  box-shadow:0 0 55px #00aaff44;
- z-index:3;
  filter:brightness(0.95);
 }
 
-/* SPOTLIGHT EFFECT */
+/* Spotlight */
 .spotlight{
  position:absolute;
  inset:0;
- pointer-events:none;
  background:radial-gradient(circle at center, rgba(255,255,255,0.18), transparent 70%);
- mix-blend-mode:screen;
+ pointer-events:none;
  opacity:1;
  transition:1.2s ease;
- z-index:1;
 }
 
-/* TAP-TO-ENABLE-SOUND LABEL */
+/* Tap to enable sound */
 .tap-sound{
  position:absolute;
- bottom:22%;
- font-size:1rem;
- opacity:0.9;
+ bottom:18%;
  background:rgba(0,0,0,0.55);
- padding:6px 18px;
+ padding:8px 20px;
  border-radius:40px;
+ font-size:1rem;
  backdrop-filter:blur(6px);
- color:#fff;
  animation:fadeIn 1.5s ease;
 }
 @keyframes fadeIn{
- from{opacity:0;}
- to{opacity:0.9;}
+ from{opacity:0;} to{opacity:1;}
 }
 
-/* MOTTO UNDER HERO */
+/* Motto */
 .motto{
  text-align:center;
- font-size:1.6rem;
- margin-top:26px;
  color:#00aaff;
+ font-size:1.5rem;
+ margin-top:20px;
  letter-spacing:3px;
  font-weight:bold;
+ white-space:nowrap;
 }
 
-/* SECTION */
-.section{
- padding:50px 20px 80px;
- max-width:1600px;
- margin:auto;
-}
-
-.section h2{
- font-size:2rem;
- color:#00aaff;
- margin-bottom:20px;
+/* Section Title */
+.section-title{
  text-align:center;
+ color:#00aaff;
+ margin-top:40px;
+ font-size:1.7rem;
  letter-spacing:1px;
 }
 
-/* VIDEO GRID */
-.video-grid{
- display:grid;
- grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
- gap:22px;
+/* Reels Feed */
+.reels{
+ display:flex;
+ flex-direction:column;
+ gap:35px;
  margin-top:25px;
+ padding:0 12px;
 }
 
-.video-grid video{
+.reel video{
  width:100%;
+ max-height:85vh;
  border-radius:12px;
  background:#000;
+ object-fit:contain;
  opacity:0;
  transform:translateY(40px);
- transition:0.6s ease;
- box-shadow:0 2px 12px rgba(0,170,255,0.15);
+ transition:0.7s ease;
 }
-
-video.reveal{
+.reel video.reveal{
  opacity:1;
  transform:translateY(0);
 }
 
-/* FULLSCREEN REEL */
+/* Gallery Button */
+.gallery-btn{
+ text-align:center;
+ margin-top:-10px;
+}
+.gallery-btn button{
+ background:transparent;
+ border:1px solid #00aaff66;
+ padding:8px 26px;
+ border-radius:30px;
+ color:#00aaff;
+ font-size:1rem;
+ letter-spacing:1px;
+}
+
+/* Gallery Grid */
+.gallery-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+ gap:14px;
+ margin-top:25px;
+ padding:0 12px;
+}
+.gallery-grid video{
+ width:100%;
+ border-radius:10px;
+ background:#000;
+ box-shadow:0 0 15px #00aaff22;
+}
+
+/* Fullscreen Viewer */
 .fullscreen{
  position:fixed;
  inset:0;
@@ -145,359 +170,207 @@ video.reveal{
  display:flex;
  justify-content:center;
  align-items:center;
- z-index:999999;
+ z-index:9999;
 }
-
 .fullscreen video{
- width:auto;
  height:100vh;
+ width:auto;
  object-fit:contain;
 }
-
 .close-fs{
  position:absolute;
- top:20px;right:20px;
- font-size:3rem;
- font-weight:bold;
+ top:20px;
+ right:20px;
+ font-size:2.5rem;
  color:#fff;
 }
-
-/* FOOTER */
 footer{
  text-align:center;
  padding:50px 0;
  opacity:0.5;
- font-size:0.9rem;
 }
 </style>
 </head>
 
 <body>
 
-<!-- INSTAGRAM -->
-<div class="topbar">
- <a target="_blank" href="https://www.instagram.com/cornelius_aurelius_/">@cornelius_aurelius_</a>
+<div class="namebar">CORNELIUS AURELIUS</div>
+<div class="ig-btn">
+ <a href="https://www.instagram.com/cornelius_aurelius_/" target="_blank">Instagram</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="hero">
  <video id="heroVideo" autoplay muted playsinline>
-   <source src="29.mp4" type="video/mp4" />
+   <source src="36.mp4" type="video/mp4">
  </video>
 
  <div class="spotlight" id="spotlight"></div>
-
  <div class="tap-sound" id="tapSound">Tap to enable sound</div>
 </section>
 
-<!-- MOTTO -->
 <div class="motto">KEEP • MOVING • FORWARD</div>
 
-<!-- VIDEOS -->
-<section id="videos" class="section">
- <h2>Training Videos</h2>
- <div class="video-grid" id="videoGrid"></div>
+<!-- TRAINING VIDEOS TITLE -->
+<div class="section-title">Training Videos</div>
+
+<!-- REELS FEED -->
+<section class="reels" id="reelsSection">
+
+ <!-- Reels 1–10 -->
+ <div class="reel"><video src="1.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="2.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="3.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="4.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="5.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="6.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="7.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="8.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="9.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+ <div class="reel"><video src="10.mp4" playsinline muted></video></div>
+ <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
+
+</section>
+
+<!-- GALLERY -->
+<div class="section-title" id="gallery">Video Gallery</div>
+
+<section class="gallery-grid">
+
+<!-- FULL VIDEO LIST (1–50) -->
+<script>
+for(let i=1;i<=50;i++){
+ document.write(`<video src="${i}.mp4" playsinline muted></video>`);
+}
+</script>
+
 </section>
 
 <footer>© 2025 Cornelius Aurelius – The Omniscientrix</footer>
 
 <script>
-/* ============================================================
-   AUTO-DETECT VIDEOS (1.mp4 → 200.mp4)
-   ============================================================ */
-(async function autoDetectVideos() {
-  const grid = document.getElementById("videoGrid");
-  for (let i = 1; i <= 200; i++) {
-    const file = i + ".mp4";
-    const exists = await fetch(file, { method: "HEAD" })
-      .then(r => r.ok)
-      .catch(() => false);
+/* HERO SOUND */
+const heroVideo=document.getElementById("heroVideo");
+const tapSound=document.getElementById("tapSound");
+const spotlight=document.getElementById("spotlight");
+let soundEnabled=false;
 
-    if (exists) {
-      const v = document.createElement("video");
-      v.src = file;
-      v.preload = "none";
-      v.muted = true;
-      v.playsInline = true;
-      v.controls = false;
-      grid.appendChild(v);
-    }
-  }
-
-  startReveal();
-  setupFullscreen();
-})();
-
-/* ============================================================
-   REVEAL + AUTO-PLAY LIKE INSTAGRAM
-   ============================================================ */
-function startReveal() {
-  const vids = document.querySelectorAll(".video-grid video");
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const v = entry.target;
-      if (entry.isIntersecting) {
-        v.classList.add("reveal");
-        v.play().catch(()=>{});
-        document.querySelectorAll(".video-grid video").forEach(o=>{
-          if(o!==v) o.pause();
-        });
-      } else {
-        v.pause();
-      }
-    });
-  }, { threshold:0.5 });
-  vids.forEach(v=>obs.observe(v));
-}
-
-/* ============================================================
-   FULLSCREEN MODE + SWIPE
-   ============================================================ */
-function setupFullscreen() {
-  const vids = [...document.querySelectorAll(".video-grid video")];
-  let index = 0;
-  let fs = null;
-
-  function open(i) {
-    index = i;
-    fs = document.createElement("div");
-    fs.className = "fullscreen";
-    const btn = document.createElement("div");
-    btn.className = "close-fs";
-    btn.innerText="×";
-    btn.onclick = close;
-    const nv = vids[i].cloneNode(true);
-    nv.autoplay = true;
-
-    fs.appendChild(btn);
-    fs.appendChild(nv);
-    document.body.appendChild(fs);
-
-    /* Swipe Navigation */
-    let startY=0,endY=0;
-    fs.addEventListener("touchstart", e=>startY=e.touches[0].clientY);
-    fs.addEventListener("touchmove", e=>endY=e.touches[0].clientY);
-    fs.addEventListener("touchend", ()=>{
-      let d=endY-startY;
-      if(Math.abs(d)>40){
-        if(d>0) close();
-        else next();
-      }
-    });
-  }
-
-  function close(){
-    if(fs) fs.remove();
-  }
-  function next(){
-    index=(index+1)%vids.length;
-    close();
-    open(index);
-  }
-
-  vids.forEach((v,i)=> v.addEventListener("click",()=>open(i)));
-}
-
-/* ============================================================
-   HERO SOUND UNLOCK + SPOTLIGHT CONTROL
-   ============================================================ */
-const hero = document.getElementById("hero");
-const heroVideo = document.getElementById("heroVideo");
-const spotlight = document.getElementById("spotlight");
-const tapSound = document.getElementById("tapSound");
-
-let soundEnabled = false;
-
-hero.addEventListener("click", ()=> {
-  if(!soundEnabled){
-    heroVideo.muted = false;
-    heroVideo.play().catch(()=>{});
-    tapSound.style.display = "none";
-    soundEnabled = true;
-
-    spotlight.style.opacity = "1";
-    setTimeout(()=> spotlight.style.opacity = "0", 1500);
-  }
+hero.addEventListener("click",()=>{
+ if(!soundEnabled){
+   heroVideo.muted=false;
+   heroVideo.play();
+   tapSound.style.display="none";
+   spotlight.style.opacity="1";
+   setTimeout(()=>spotlight.style.opacity="0",1200);
+   soundEnabled=true;
+ } else {
+   heroVideo.paused?heroVideo.play():heroVideo.pause();
+ }
 });
 
-/* Spotlight fades when scrolling */
+/* Spotlight scroll fade */
 window.addEventListener("scroll",()=>{
-  const top = window.scrollY;
-  if(top>50){
-    spotlight.style.opacity="0";
-  }
+ if(window.scrollY>20){
+   spotlight.style.opacity="0";
+ }
 });
+
+/* REELS AUTO PLAY */
+const reelVideos=document.querySelectorAll(".reel video");
+const reelObserver=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+   const v=entry.target;
+   if(entry.isIntersecting){
+     v.classList.add("reveal");
+     v.play().catch(()=>{});
+   } else {
+     v.pause();
+   }
+ });
+},{threshold:0.6});
+reelVideos.forEach(v=>reelObserver.observe(v));
+
+/* Tap to toggle sound + play */
+reelVideos.forEach(v=>{
+ v.addEventListener("click",()=>{
+   v.paused?v.play():v.pause();
+   v.muted=!v.muted;
+ });
+});
+
+/* Scroll to gallery */
+function scrollToGallery(){
+ document.getElementById("gallery").scrollIntoView({behavior:"smooth"});
+}
+
+/* FULLSCREEN VIEWER */
+const galleryVideos=document.querySelectorAll(".gallery-grid video");
+let fsDiv=null;
+let currentIndex=0;
+
+function openFullscreen(i){
+ currentIndex=i;
+ fsDiv=document.createElement("div");
+ fsDiv.className="fullscreen";
+
+ const closeBtn=document.createElement("div");
+ closeBtn.className="close-fs";
+ closeBtn.textContent="×";
+ closeBtn.onclick=closeFullscreen;
+
+ const newVid=galleryVideos[i].cloneNode(true);
+ newVid.autoplay=true;
+ newVid.muted=false;
+
+ fsDiv.appendChild(closeBtn);
+ fsDiv.appendChild(newVid);
+ document.body.appendChild(fsDiv);
+
+ enableSwipe(fsDiv,newVid);
+}
+
+function closeFullscreen(){ if(fsDiv) fsDiv.remove(); }
+
+/* Click gallery videos */
+galleryVideos.forEach((v,i)=>v.addEventListener("click",()=>openFullscreen(i)));
+
+function enableSwipe(container,vid){
+ let startY=0,endY=0;
+ container.addEventListener("touchstart",e=>startY=e.touches[0].clientY);
+ container.addEventListener("touchmove",e=>endY=e.touches[0].clientY);
+ container.addEventListener("touchend",()=>{
+   const diff=endY-startY;
+   if(Math.abs(diff)>40){
+     if(diff>0) closeFullscreen();
+     else nextFullscreen();
+   }
+ });
+}
+
+function nextFullscreen(){
+ currentIndex=(currentIndex+1)%galleryVideos.length;
+ closeFullscreen();
+ openFullscreen(currentIndex);
+}
 </script>
 
-</body>
-</html>
-<script>
-/* ============================================================
-   1. HERO VIDEO — TAP TO ENABLE SOUND + SPOTLIGHT
-   ============================================================ */
-
-const hero = document.getElementById("hero");
-const heroVideo = document.getElementById("heroVideo");
-const tapSound = document.getElementById("tapSound");
-const spotlight = document.getElementById("spotlight");
-const volIcon = document.getElementById("volIcon");
-
-let soundEnabled = false;
-
-// Hero tap to enable sound
-hero.addEventListener("click", () => {
-  if (!soundEnabled) {
-    heroVideo.muted = false;
-    heroVideo.volume = 1;
-    heroVideo.play().catch(()=>{});
-
-    tapSound.style.display = "none";
-    volIcon.style.opacity = "1";
-    volIcon.style.color = "#00aaff";
-
-    // Spotlight brightens briefly then fades
-    spotlight.style.opacity = "1";
-    setTimeout(() => {
-      spotlight.style.opacity = "0";
-    }, 1200);
-
-    soundEnabled = true;
-  } else {
-    // Tap again = toggle play/pause
-    if (heroVideo.paused) heroVideo.play();
-    else heroVideo.pause();
-  }
-});
-
-// Fade spotlight when scrolling
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 20) {
-    spotlight.style.opacity = "0";
-  }
-});
-
-/* ============================================================
-   2. INSTAGRAM-STYLE REELS — AUTO PLAY / PAUSE
-   ============================================================ */
-
-const reelVideos = document.querySelectorAll(".reel video");
-
-const reelObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const v = entry.target;
-
-    if (entry.isIntersecting) {
-      v.classList.add("reveal");
-      v.play().catch(()=>{});
-    } else {
-      v.pause();
-    }
-  });
-}, { threshold: 0.6 });
-
-// Observe each reel video
-reelVideos.forEach(v => reelObserver.observe(v));
-
-// Tap reel to toggle play/pause AND toggle sound (clean UX)
-reelVideos.forEach(v => {
-  v.addEventListener("click", () => {
-    if (v.paused) v.play();
-    else v.pause();
-
-    // If sound OFF → turn ON
-    if (v.muted) {
-      v.muted = false;
-      v.volume = 1;
-    } else {
-      v.muted = true;
-    }
-  });
-});
-
-/* ============================================================
-   3. SCROLL TO GALLERY BUTTON
-   ============================================================ */
-
-function scrollToGallery() {
-  const g = document.getElementById("gallery");
-  g.scrollIntoView({ behavior: "smooth" });
-}
-
-/* ============================================================
-   4. GALLERY FULLSCREEN VIEWER + SWIPE NAVIGATION
-   ============================================================ */
-
-const galleryVideos = document.querySelectorAll(".gallery-grid video");
-let fsDiv = null;
-let currentIndex = 0;
-
-function openFullscreen(i) {
-  currentIndex = i;
-
-  fsDiv = document.createElement("div");
-  fsDiv.className = "fullscreen";
-
-  const closeBtn = document.createElement("div");
-  closeBtn.className = "close-fs";
-  closeBtn.textContent = "×";
-  closeBtn.onclick = closeFullscreen;
-
-  const newVid = galleryVideos[i].cloneNode(true);
-  newVid.autoplay = true;
-  newVid.muted = false;
-  newVid.volume = 1;
-
-  fsDiv.appendChild(closeBtn);
-  fsDiv.appendChild(newVid);
-  document.body.appendChild(fsDiv);
-
-  enableSwipe(fsDiv, newVid);
-}
-
-function closeFullscreen() {
-  if (fsDiv) fsDiv.remove();
-}
-
-// Add click event to open fullscreen
-galleryVideos.forEach((v, i) => {
-  v.addEventListener("click", () => openFullscreen(i));
-});
-
-/* -------------------------
-   Swipe navigation (mobile)
-   ------------------------- */
-
-function enableSwipe(container, vid) {
-  let startY = 0;
-  let endY = 0;
-
-  container.addEventListener("touchstart", e => {
-    startY = e.touches[0].clientY;
-  });
-
-  container.addEventListener("touchmove", e => {
-    endY = e.touches[0].clientY;
-  });
-
-  container.addEventListener("touchend", () => {
-    const diff = endY - startY;
-    if (Math.abs(diff) > 40) {
-      if (diff > 0) {
-        closeFullscreen(); // swipe down = exit
-      } else {
-        nextFullscreen(); // swipe up = next
-      }
-    }
-  });
-}
-
-function nextFullscreen() {
-  const total = galleryVideos.length;
-  currentIndex = (currentIndex + 1) % total;
-  closeFullscreen();
-  openFullscreen(currentIndex);
-}
-
-</script>
 </body>
 </html>
