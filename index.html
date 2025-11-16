@@ -5,119 +5,118 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Cornelius Aurelius – Fitness Equilibrium</title>
 
-<meta name="description" content="Cornelius Aurelius – Fitness Equilibrium. Vertical-reel fitness portal with tiger emblem, neon universe aesthetic, and cinematic mobile-first design.">
+<meta name="description" content="Cornelius Aurelius – Fitness Equilibrium. Transcendent vertical-reel cinematic experience. Tiger hologram. Neon universe-black aesthetic. Auto-detected videos.">
 <meta name="theme-color" content="#000000">
 
 <style>
 /* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
-html,body{background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden;}
+html,body{
+  background:#000;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+  touch-action:manipulation;
+}
 
-/* ROOT */
+/* ROOT VARS */
 :root{
  --blue:#00aaff;
  --red:#ff3300;
- --glowB:0 0 35px #00aaffaa,0 0 65px #00aaff44;
- --glowR:0 0 35px #ff3300aa,0 0 65px #ff330044;
- --glowTiger:0 0 60px #00aaffaa,0 0 120px #ff330066;
+ --glowB:0 0 45px #00aaffaa,0 0 90px #00aaff55;
+ --glowTiger:0 0 80px #00aaffcc,0 0 120px #ff330066;
 }
 
-/* TOP INSTAGRAM BAR */
+/* INSTAGRAM TOPBAR */
 .topbar{
- width:100%;
- padding:12px 20px;
- display:flex;
- align-items:center;
- gap:10px;
- background:rgba(0,0,0,0.7);
- backdrop-filter:blur(10px);
  position:fixed;
  top:0;left:0;
- z-index:999;
+ width:100%;
+ padding:12px 20px;
+ backdrop-filter:blur(12px);
+ background:rgba(0,0,0,0.65);
+ display:flex;align-items:center;
+ gap:12px;
+ z-index:9999;
  border-bottom:1px solid #0a0a0a;
 }
-
 .topbar img{
- width:34px;
- height:34px;
- object-fit:contain;
- filter:drop-shadow(0 0 6px #00aaff);
- border-radius:50%;
+ width:34px;height:34px;object-fit:contain;
+ filter:drop-shadow(0 0 8px #00aaff);
 }
-
 .topbar a{
- color:#00aaff;
- font-size:1.05rem;
- text-decoration:none;
+ color:var(--blue);
+ font-size:1.1rem;
  font-weight:bold;
+ text-decoration:none;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero{
- margin-top:58px;
+ margin-top:60px;
  position:relative;
  height:100vh;
- width:100%;
- overflow:hidden;
  display:flex;
  align-items:center;
  justify-content:center;
+ overflow:hidden;
 }
 
-/* HERO BACKGROUND GRID */
+/* BACKGROUND GRID (ANIMATED) */
 .hero::before{
  content:"";
  position:absolute;
  inset:0;
  background:
-   linear-gradient(90deg,#00223333 1px,transparent 1px),
-   linear-gradient(#00223333 1px,transparent 1px);
+  linear-gradient(90deg,#00446633 1px,transparent 1px),
+  linear-gradient(#00446633 1px,transparent 1px);
  background-size:40px 40px;
- opacity:0.07;
+ opacity:0.08;
+ animation:gridShift 40s linear infinite;
  z-index:-3;
- animation:gridMove 40s linear infinite;
 }
-@keyframes gridMove{
+@keyframes gridShift{
  from{transform:translateY(0);}
  to{transform:translateY(100%);}
 }
 
-/* HERO VIDEO (VERTICAL FIT) */
+/* HERO VIDEO – VERTICAL FULL FIT */
 .hero video{
- height:85vh;
+ height:88vh;
  width:auto;
- max-width:80vw;
- border-radius:20px;
+ max-width:85vw;
  object-fit:contain;
- z-index:2;
- filter:brightness(88%);
- box-shadow:0 0 40px #00aaff55;
+ border-radius:22px;
+ filter:brightness(0.90);
+ box-shadow:0 0 60px #00aaff44;
+ z-index:3;
 }
 
-/* HERO NEON SIDE PANELS */
+/* HERO NEON SIDE GLOW */
 .hero::after{
  content:"";
  position:absolute;
- left:0;top:0;
- height:100%;width:100%;
- background:linear-gradient(90deg,rgba(0,170,255,0.15),transparent 40%,transparent 60%,rgba(255,50,0,0.15));
+ inset:0;
+ background:
+  linear-gradient(90deg,rgba(0,170,255,0.25),transparent 40%,transparent 60%,rgba(255,50,0,0.25));
  z-index:-2;
 }
 
-/* TIGER HOLOGRAM BEHIND HERO */
+/* TIGER HOLOGRAM */
 .tiger-holo{
  position:absolute;
  top:50%;left:50%;
- transform:translate(-50%,-52%) scale(1.25);
- width:420px;
- opacity:0.12;
- z-index:-1;
- filter:drop-shadow(0 0 75px #00aaff);
- animation:tigerFloat 8s ease-in-out infinite;
+ transform:translate(-50%,-52%) scale(1.15);
+ width:460px;
+ opacity:0.14;
+ z-index:1;
+ filter:drop-shadow(0 0 90px #00aaff);
+ animation:tigerFloat 9s ease-in-out infinite;
+ pointer-events:none;
 }
 @keyframes tigerFloat{
- 0%,100%{transform:translate(-50%,-52%) scale(1.25);}
- 50%{transform:translate(-50%,-48%) scale(1.28);}
+ 0%,100%{transform:translate(-50%,-52%) scale(1.15);}
+ 50%{transform:translate(-50%,-46%) scale(1.22);}
 }
 
 /* HERO TEXT */
@@ -125,21 +124,22 @@ html,body{background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;over
  position:absolute;
  bottom:10%;
  text-align:center;
- animation:fadeUp 2s ease;
+ z-index:999;
+ animation:fadeUp 2.2s ease;
 }
 @keyframes fadeUp{
- from{opacity:0;transform:translateY(40px);}
+ from{opacity:0;transform:translateY(60px);}
  to{opacity:1;transform:translateY(0);}
 }
 
 .hero-text h1{
- font-size:clamp(2.5rem,7vw,4rem);
- letter-spacing:5px;
+ font-size:clamp(2.6rem,7vw,4.2rem);
+ letter-spacing:6px;
  text-transform:uppercase;
  text-shadow:var(--glowB);
 }
 .hero-text p{
- margin-top:12px;
+ margin-top:15px;
  opacity:0.85;
  font-size:clamp(1.1rem,3vw,1.4rem);
 }
@@ -147,104 +147,123 @@ html,body{background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;over
 /* CTA */
 .cta{
  display:inline-block;
- margin-top:35px;
+ margin-top:38px;
  padding:14px 46px;
  border-radius:50px;
  border:2px solid #00aaff;
  color:#00aaff;
- text-decoration:none;
  font-size:1.2rem;
+ text-decoration:none;
  transition:0.3s;
 }
 .cta:hover{
  background:#00aaff;
  color:#000;
  box-shadow:var(--glowB);
- transform:translateY(-4px);
+ transform:translateY(-5px);
 }
 
 /* SECTION */
 .section{
  padding:60px 20px;
- max-width:1500px;
+ max-width:1600px;
  margin:auto;
 }
+.section h2{
+ font-size:clamp(1.5rem,5vw,2.4rem);
+ color:var(--blue);
+ letter-spacing:2px;
+ margin-bottom:28px;
+}
 
-/* GRID */
+/* VIDEO GRID */
 .video-grid{
  display:grid;
  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
- gap:22px;
+ gap:24px;
  margin-top:40px;
 }
 
+/* VIDEO CARD */
 .video-grid video{
  width:100%;
- border-radius:14px;
- border:1px solid #0a0a0a;
+ border-radius:16px;
  background:#000;
  opacity:0;
  transform:translateY(40px);
- transition:0.6s ease;
+ transition:0.7s ease;
+ box-shadow:0 2px 12px rgba(0,170,255,0.15);
 }
 
-/* Reveal */
+/* REVEAL */
 video.reveal{
  opacity:1;
  transform:translateY(0);
- box-shadow:0 0 20px #00aaff33;
 }
 
-/* TAP TO FULLSCREEN */
+/* FULLSCREEN MODE */
 .fullscreen{
  position:fixed;
  inset:0;
  background:#000;
- z-index:9999;
  display:flex;
  align-items:center;
  justify-content:center;
+ z-index:999999;
 }
-
 .fullscreen video{
  width:auto;
  height:100vh;
  object-fit:contain;
 }
-
-/* Close zone */
 .close-fs{
  position:absolute;
  top:20px;right:20px;
- font-size:2rem;
+ font-size:3rem;
+ font-weight:bold;
  color:#fff;
+ z-index:1000000;
 }
 
-/* TIGER WATERMARK BEHIND GRID */
+/* TIGER WATERMARK */
 .watermark{
  position:fixed;
- bottom:15%;
- right:-5%;
- opacity:0.06;
- width:500px;
+ bottom:18%;
+ right:-6%;
+ width:540px;
+ opacity:0.05;
  z-index:-1;
+ pointer-events:none;
 }
 
-/* FOOTER */
-footer{
- text-align:center;
- padding:50px;
+/* PARTICLE FIELD */
+.particle{
+ position:fixed;
+ width:6px;height:6px;
+ background:#00aaff;
+ border-radius:50%;
  opacity:0.55;
- font-size:0.9rem;
- letter-spacing:1px;
+ pointer-events:none;
+ animation:float 8s infinite ease-in-out;
+ filter:drop-shadow(0 0 10px #00aaff);
+}
+@keyframes float{
+ 0%{transform:translateY(0) scale(1);}
+ 50%{transform:translateY(-60px) scale(1.4);}
+ 100%{transform:translateY(0) scale(1);}
+}
+
+/* PARALLAX REACTIVE */
+.parallax-layer{
+ position:absolute;
+ inset:0;
+ pointer-events:none;
 }
 
 </style>
 </head>
-
 <body>
 
-<!-- TOP INSTAGRAM BAR -->
 <div class="topbar">
  <img src="tiger.png">
  <a target="_blank" href="https://www.instagram.com/cornelius_aurelius_/">@cornelius_aurelius_</a>
@@ -265,56 +284,207 @@ footer{
  </div>
 </section>
 
-<!-- TIGER WATERMARK -->
+<!-- WATERMARK TIGER -->
 <img src="tiger.png" class="watermark">
 
 <!-- VIDEO SECTION -->
 <section id="videos" class="section">
  <h2>Training Videos</h2>
-
- <div class="video-grid">
- <!-- AUTO-GENERATED 1–50 -->
- <!-- The list below includes all videos 1.mp4 through 50.mp4 -->
- <script>
- let vids="";
- for(let i=1;i<=50;i++){
-   vids+=`<video preload="none" muted playsinline controls><source src="${i}.mp4"></video>`;
- }
- document.write(vids);
- </script>
- </div>
+ <div class="video-grid" id="videoGrid"></div>
 </section>
 
 <footer>© 2025 Cornelius Aurelius – The Omniscientrix</footer>
 
 <script>
-/* SCROLL REVEAL */
-const v=document.querySelectorAll(".video-grid video");
-const r=()=>{v.forEach(x=>{
- const t=x.getBoundingClientRect().top;
- if(t<window.innerHeight-80){x.classList.add("reveal");}
-});};
-window.addEventListener("scroll",r);r();
+ /* ===========================================================
+   TRANSCENDENT ENGINE — AUTO-DETECT VIDEOS
+   =========================================================== */
+(async function autoDetectVideos() {
+  const grid = document.getElementById("videoGrid");
 
-/* FULLSCREEN REEL MODE */
-let fs=null;
-v.forEach(video=>{
- video.addEventListener("click",()=>{
-   fs=document.createElement("div");
-   fs.className="fullscreen";
-   fs.innerHTML=`<div class="close-fs">×</div>`;
-   let nv=video.cloneNode(true);
-   nv.controls=true;
-   fs.appendChild(nv);
-   document.body.appendChild(fs);
+  // GitHub Pages cannot list directory contents,
+  // but we can predict your filenames based on numeric sequence.
+  // We try loading 1.mp4 → 200.mp4 automatically.
+  const MAX = 200; // future-proof limit
+  for (let i = 1; i <= MAX; i++) {
+    const filename = i + ".mp4";
 
-   nv.play();
+    // Attempt to load video
+    const exists = await fetch(filename, { method: "HEAD" })
+      .then(res => res.ok)
+      .catch(() => false);
 
-   fs.querySelector(".close-fs").onclick=()=>fs.remove();
-   fs.onclick=e=>{if(e.target===fs)fs.remove();}
- });
+    if (exists) {
+      const vid = document.createElement("video");
+      vid.src = filename;
+      vid.preload = "none";
+      vid.muted = true;
+      vid.playsInline = true;
+      vid.controls = false; // manual controls replaced by auto-play & tap mode
+
+      grid.appendChild(vid);
+    }
+  }
+})();
+/* ===========================================================
+   SCROLL REVEAL + AUTO-PLAY
+   =========================================================== */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const video = entry.target;
+
+    if (entry.isIntersecting) {
+      video.classList.add("reveal");
+
+      // Auto-play best-of-best mode
+      try { video.play(); } catch(e){}
+
+      // Pause all other videos
+      document.querySelectorAll(".video-grid video").forEach(v => {
+        if (v !== video) v.pause();
+      });
+
+    } else {
+      video.pause();
+    }
+  });
+}, { threshold: 0.4 });
+
+setTimeout(() => {
+  document.querySelectorAll(".video-grid video")
+    .forEach(v => revealObserver.observe(v));
+}, 1500);
+/* ===========================================================
+   FULLSCREEN REEL MODE + SWIPE NAVIGATION
+   =========================================================== */
+let currentIndex = 0;
+let fullScreenDiv = null;
+
+function openFullscreen(index) {
+  const allVideos = [...document.querySelectorAll(".video-grid video")];
+  currentIndex = index;
+
+  fullScreenDiv = document.createElement("div");
+  fullScreenDiv.className = "fullscreen";
+
+  const closeBtn = document.createElement("div");
+  closeBtn.className = "close-fs";
+  closeBtn.innerText = "×";
+  closeBtn.onclick = closeFullscreen;
+
+  const vid = allVideos[index].cloneNode(true);
+  vid.controls = false;
+  vid.autoplay = true;
+
+  fullScreenDiv.appendChild(closeBtn);
+  fullScreenDiv.appendChild(vid);
+  document.body.appendChild(fullScreenDiv);
+
+  /* Swipe detection */
+  let startY = 0;
+  let endY = 0;
+
+  fullScreenDiv.addEventListener("touchstart", e => {
+    startY = e.touches[0].clientY;
+  });
+
+  fullScreenDiv.addEventListener("touchmove", e => {
+    endY = e.touches[0].clientY;
+  });
+
+  fullScreenDiv.addEventListener("touchend", () => {
+    const diff = endY - startY;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) { closeFullscreen(); }       // swipe down
+      else { nextReel(); }                       // swipe up
+    }
+  });
+}
+
+function closeFullscreen() {
+  if (fullScreenDiv) fullScreenDiv.remove();
+}
+
+function nextReel() {
+  const vids = document.querySelectorAll(".video-grid video");
+  currentIndex = (currentIndex + 1) % vids.length;
+  closeFullscreen();
+  openFullscreen(currentIndex);
+}
+
+setTimeout(() => {
+  document.querySelectorAll(".video-grid video").forEach((v, i) => {
+    v.addEventListener("click", () => openFullscreen(i));
+  });
+}, 2000);
+/* ===========================================================
+   EQUILIBRIUM PARTICLES
+   =========================================================== */
+for (let i = 0; i < 35; i++) {
+  const p = document.createElement("div");
+  p.className = "particle";
+  document.body.appendChild(p);
+
+  const size = Math.random() * 6 + 4;
+  p.style.width = size + "px";
+  p.style.height = size + "px";
+
+  p.style.left = Math.random() * 100 + "vw";
+  p.style.top = Math.random() * 100 + "vh";
+
+  p.style.animationDuration = (6 + Math.random() * 6) + "s";
+}
+/* ===========================================================
+   PARALLAX ENGINE
+   =========================================================== */
+const hero = document.querySelector(".hero");
+const tiger = document.querySelector(".tiger-holo");
+const heroVideo = hero.querySelector("video");
+
+document.addEventListener("mousemove", e => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 20;
+  const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+  tiger.style.transform =
+    `translate(-50%, -52%) scale(1.15) translate(${x/2}px, ${y/3}px)`;
+
+  heroVideo.style.transform =
+    `translate(${x/5}px, ${y/5}px)`;
+});
+
+/* Mobile tilt support */
+window.addEventListener("deviceorientation", e => {
+  const x = e.gamma;  // left/right tilt
+  const y = e.beta;   // forward/back tilt
+
+  tiger.style.transform =
+    `translate(-50%, -52%) scale(1.15) translate(${x/4}px, ${y/6}px)`;
+
+  heroVideo.style.transform =
+    `translate(${x/10}px, ${y/10}px)`;
+});
+/* ===========================================================
+   TIGER SOUL-FLARE EVENT
+   =========================================================== */
+hero.addEventListener("click", () => {
+  tiger.style.transition = "0.5s";
+  tiger.style.opacity = "0.35";
+  tiger.style.filter = "drop-shadow(0 0 160px #00aaff)";
+
+  setTimeout(() => {
+    tiger.style.opacity = "0.14";
+    tiger.style.filter = "drop-shadow(0 0 90px #00aaff)";
+  }, 500);
+});
+/* ===========================================================
+   ATMOSPHERIC PULSE
+   =========================================================== */
+window.addEventListener("scroll", () => {
+  const val = window.scrollY;
+  tiger.style.opacity = 0.14 + Math.sin(val / 2000) * 0.05;
 });
 </script>
-
 </body>
 </html>
+
