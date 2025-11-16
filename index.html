@@ -331,3 +331,173 @@ window.addEventListener("scroll",()=>{
 
 </body>
 </html>
+<script>
+/* ============================================================
+   1. HERO VIDEO — TAP TO ENABLE SOUND + SPOTLIGHT
+   ============================================================ */
+
+const hero = document.getElementById("hero");
+const heroVideo = document.getElementById("heroVideo");
+const tapSound = document.getElementById("tapSound");
+const spotlight = document.getElementById("spotlight");
+const volIcon = document.getElementById("volIcon");
+
+let soundEnabled = false;
+
+// Hero tap to enable sound
+hero.addEventListener("click", () => {
+  if (!soundEnabled) {
+    heroVideo.muted = false;
+    heroVideo.volume = 1;
+    heroVideo.play().catch(()=>{});
+
+    tapSound.style.display = "none";
+    volIcon.style.opacity = "1";
+    volIcon.style.color = "#00aaff";
+
+    // Spotlight brightens briefly then fades
+    spotlight.style.opacity = "1";
+    setTimeout(() => {
+      spotlight.style.opacity = "0";
+    }, 1200);
+
+    soundEnabled = true;
+  } else {
+    // Tap again = toggle play/pause
+    if (heroVideo.paused) heroVideo.play();
+    else heroVideo.pause();
+  }
+});
+
+// Fade spotlight when scrolling
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
+    spotlight.style.opacity = "0";
+  }
+});
+
+/* ============================================================
+   2. INSTAGRAM-STYLE REELS — AUTO PLAY / PAUSE
+   ============================================================ */
+
+const reelVideos = document.querySelectorAll(".reel video");
+
+const reelObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const v = entry.target;
+
+    if (entry.isIntersecting) {
+      v.classList.add("reveal");
+      v.play().catch(()=>{});
+    } else {
+      v.pause();
+    }
+  });
+}, { threshold: 0.6 });
+
+// Observe each reel video
+reelVideos.forEach(v => reelObserver.observe(v));
+
+// Tap reel to toggle play/pause AND toggle sound (clean UX)
+reelVideos.forEach(v => {
+  v.addEventListener("click", () => {
+    if (v.paused) v.play();
+    else v.pause();
+
+    // If sound OFF → turn ON
+    if (v.muted) {
+      v.muted = false;
+      v.volume = 1;
+    } else {
+      v.muted = true;
+    }
+  });
+});
+
+/* ============================================================
+   3. SCROLL TO GALLERY BUTTON
+   ============================================================ */
+
+function scrollToGallery() {
+  const g = document.getElementById("gallery");
+  g.scrollIntoView({ behavior: "smooth" });
+}
+
+/* ============================================================
+   4. GALLERY FULLSCREEN VIEWER + SWIPE NAVIGATION
+   ============================================================ */
+
+const galleryVideos = document.querySelectorAll(".gallery-grid video");
+let fsDiv = null;
+let currentIndex = 0;
+
+function openFullscreen(i) {
+  currentIndex = i;
+
+  fsDiv = document.createElement("div");
+  fsDiv.className = "fullscreen";
+
+  const closeBtn = document.createElement("div");
+  closeBtn.className = "close-fs";
+  closeBtn.textContent = "×";
+  closeBtn.onclick = closeFullscreen;
+
+  const newVid = galleryVideos[i].cloneNode(true);
+  newVid.autoplay = true;
+  newVid.muted = false;
+  newVid.volume = 1;
+
+  fsDiv.appendChild(closeBtn);
+  fsDiv.appendChild(newVid);
+  document.body.appendChild(fsDiv);
+
+  enableSwipe(fsDiv, newVid);
+}
+
+function closeFullscreen() {
+  if (fsDiv) fsDiv.remove();
+}
+
+// Add click event to open fullscreen
+galleryVideos.forEach((v, i) => {
+  v.addEventListener("click", () => openFullscreen(i));
+});
+
+/* -------------------------
+   Swipe navigation (mobile)
+   ------------------------- */
+
+function enableSwipe(container, vid) {
+  let startY = 0;
+  let endY = 0;
+
+  container.addEventListener("touchstart", e => {
+    startY = e.touches[0].clientY;
+  });
+
+  container.addEventListener("touchmove", e => {
+    endY = e.touches[0].clientY;
+  });
+
+  container.addEventListener("touchend", () => {
+    const diff = endY - startY;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        closeFullscreen(); // swipe down = exit
+      } else {
+        nextFullscreen(); // swipe up = next
+      }
+    }
+  });
+}
+
+function nextFullscreen() {
+  const total = galleryVideos.length;
+  currentIndex = (currentIndex + 1) % total;
+  closeFullscreen();
+  openFullscreen(currentIndex);
+}
+
+</script>
+</body>
+</html>
