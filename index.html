@@ -1,411 +1,532 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cornelius Aurelius – Fitness Equilibrium</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-<meta name="theme-color" content="#000000">
-<meta name="description" content="Cornelius Aurelius – Fitness Equilibrium. Cinematic reels, fast-loading, tap-to-enable-sound hero, elite masculine minimal design.">
+  <title>Cornelius Aurelius Content | Official 9:16 Videos and Images</title>
+  <meta name="description" content="Official Cornelius Aurelius 9:16 mobile-first content gallery. Fast-loading videos and visual media of Cornelius Aurelius for phones, tablets, Chromebooks, laptops and desktop screens." />
+  <meta name="keywords" content="Cornelius Aurelius, Cornelious Aurelius, Cornelius Aurielius, Cornelius Aurelias, Cornelius Aureluis, Cornelius Aurelius videos, Cornelius Aurelius images, Cornelius Aurelius content, Cornelius Aurelius Instagram, 9:16 video, 1080x1920 MP4, 1080x1920 MOV" />
+  <meta name="author" content="Cornelius Aurelius" />
+  <meta name="creator" content="Cornelius Aurelius" />
+  <meta name="publisher" content="Cornelius Aurelius" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#000000" />
 
-<style>
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-html,body{
- background:#000;
- color:#fff;
- font-family:Arial,Helvetica,sans-serif;
- overflow-x:hidden;
-}
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Cornelius Aurelius Content" />
+  <meta property="og:description" content="Official fast-loading 9:16 video and image content of Cornelius Aurelius." />
+  <meta property="og:site_name" content="Cornelius Aurelius Content" />
+  <meta property="og:image" content="cornelius-aurelius-video-thumbnail.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cornelius Aurelius Content" />
+  <meta name="twitter:description" content="Official 9:16 media content of Cornelius Aurelius." />
+  <meta name="twitter:image" content="cornelius-aurelius-video-thumbnail.jpg" />
 
-/* NAME */
-.namebar{
- width:100%;
- text-align:center;
- margin-top:18px;
- font-size:1.9rem;
- font-weight:bold;
- letter-spacing:3px;
- color:#fff;
-}
+  <style>
+    :root {
+      --bg:#000;
+      --text:#fff;
+      --line:rgba(255,255,255,.18);
+      --glass:rgba(0,0,0,.58);
+      --glass2:rgba(255,255,255,.08);
+      --blue:#0bbcff;
+      --gold:#ffd166;
+      --shadow:0 20px 70px rgba(0,0,0,.62);
+    }
 
-/* INSTAGRAM BUTTON */
-.ig-btn{
- text-align:center;
- margin-top:6px;
-}
-.ig-btn a{
- color:#00aaff;
- text-decoration:none;
- padding:6px 14px;
- font-size:1.1rem;
- border:1px solid #00aaff55;
- border-radius:8px;
-}
+    * { box-sizing:border-box; }
+    html {
+      height:100%;
+      background:#000;
+      scroll-behavior:smooth;
+      scroll-snap-type:y mandatory;
+    }
+    body {
+      min-height:100%;
+      margin:0;
+      background:#000;
+      color:var(--text);
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+      overscroll-behavior-y:contain;
+    }
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-2;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(11,188,255,.22), transparent 34rem),
+        radial-gradient(circle at 18% 80%, rgba(255,209,102,.12), transparent 26rem),
+        radial-gradient(circle at 90% 65%, rgba(65,94,255,.14), transparent 28rem),
+        #000;
+    }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
 
-/* HERO */
-.hero{
- margin-top:20px;
- height:88vh;
- display:flex;
- justify-content:center;
- align-items:center;
- position:relative;
- overflow:hidden;
-}
+    .menu-wrap {
+      position:fixed;
+      top:calc(12px + env(safe-area-inset-top));
+      right:calc(12px + env(safe-area-inset-right));
+      z-index:1000;
+    }
+    .menu-toggle {
+      min-height:44px;
+      max-width:calc(100vw - 24px);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--glass);
+      color:#fff;
+      backdrop-filter:blur(16px);
+      font-weight:900;
+      letter-spacing:.01em;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+    }
+    .menu-panel {
+      position:absolute;
+      top:calc(100% + 10px);
+      right:0;
+      width:min(300px, calc(100vw - 24px));
+      display:none;
+      gap:8px;
+      padding:10px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.9);
+      backdrop-filter:blur(18px);
+      box-shadow:var(--shadow);
+    }
+    .menu-panel.open { display:grid; }
+    .menu-panel a {
+      min-height:48px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.1);
+      background:var(--glass2);
+      font-weight:900;
+    }
+    .menu-panel a:hover,
+    .menu-panel a:focus-visible,
+    .menu-toggle:hover,
+    .menu-toggle:focus-visible {
+      outline:0;
+      border-color:rgba(11,188,255,.65);
+      background:rgba(11,188,255,.12);
+    }
+    .menu-panel a.tip {
+      border-color:rgba(255,209,102,.42);
+      background:linear-gradient(135deg, rgba(255,209,102,.18), rgba(11,188,255,.08));
+    }
 
-.hero video{
- height:88vh;
- width:auto;
- object-fit:contain;
- border-radius:18px;
- box-shadow:0 0 55px #00aaff44;
- filter:brightness(0.95);
-}
+    #feed {
+      width:100%;
+      min-height:100svh;
+    }
+    .reel {
+      width:100%;
+      min-height:100svh;
+      height:100svh;
+      scroll-snap-align:start;
+      scroll-snap-stop:always;
+      display:grid;
+      place-items:center;
+      background:#000;
+      padding:0;
+      position:relative;
+      overflow:hidden;
+    }
+    .media-shell {
+      width:min(100vw, calc(100svh * .5625));
+      height:min(100svh, calc(100vw * 1.7777778));
+      aspect-ratio:9 / 16;
+      display:grid;
+      place-items:center;
+      background:#000;
+      overflow:hidden;
+      position:relative;
+    }
+    .media-shell::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.07), inset 0 0 90px rgba(0,0,0,.25);
+    }
+    video,
+    img {
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      background:#000;
+      display:block;
+    }
+    video { cursor:pointer; }
+    video::-webkit-media-controls-panel { background-image:linear-gradient(transparent, rgba(0,0,0,.45)); }
 
-/* Spotlight */
-.spotlight{
- position:absolute;
- inset:0;
- background:radial-gradient(circle at center, rgba(255,255,255,0.18), transparent 70%);
- pointer-events:none;
- opacity:1;
- transition:1.2s ease;
-}
+    .sound-dot {
+      position:absolute;
+      left:calc(12px + env(safe-area-inset-left));
+      bottom:calc(12px + env(safe-area-inset-bottom));
+      width:12px;
+      height:12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.45);
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow:0 0 26px rgba(255,255,255,.22);
+      opacity:.8;
+      pointer-events:none;
+      z-index:5;
+    }
+    .reel.sound-on .sound-dot {
+      background:var(--blue);
+      box-shadow:0 0 28px rgba(11,188,255,.9);
+    }
 
-/* Tap to enable sound */
-.tap-sound{
- position:absolute;
- bottom:18%;
- background:rgba(0,0,0,0.55);
- padding:8px 20px;
- border-radius:40px;
- font-size:1rem;
- backdrop-filter:blur(6px);
- animation:fadeIn 1.5s ease;
-}
-@keyframes fadeIn{
- from{opacity:0;} to{opacity:1;}
-}
+    .footer {
+      width:100%;
+      height:100svh;
+      min-height:100svh;
+      scroll-snap-align:start;
+      display:grid;
+      place-items:center;
+      background:#000;
+      padding:24px;
+      text-align:center;
+      font-weight:900;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.84);
+    }
 
-/* Motto */
-.motto{
- text-align:center;
- color:#00aaff;
- font-size:1.5rem;
- margin-top:20px;
- letter-spacing:3px;
- font-weight:bold;
- white-space:nowrap;
-}
+    .sr-only-index {
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
 
-/* Section Title */
-.section-title{
- text-align:center;
- color:#00aaff;
- margin-top:40px;
- font-size:1.7rem;
- letter-spacing:1px;
-}
-
-/* Reels Feed */
-.reels{
- display:flex;
- flex-direction:column;
- gap:35px;
- margin-top:25px;
- padding:0 12px;
-}
-
-.reel video{
- width:100%;
- max-height:85vh;
- border-radius:12px;
- background:#000;
- object-fit:contain;
- opacity:0;
- transform:translateY(40px);
- transition:0.7s ease;
-}
-.reel video.reveal{
- opacity:1;
- transform:translateY(0);
-}
-
-/* Gallery Button */
-.gallery-btn{
- text-align:center;
- margin-top:-10px;
-}
-.gallery-btn button{
- background:transparent;
- border:1px solid #00aaff66;
- padding:8px 26px;
- border-radius:30px;
- color:#00aaff;
- font-size:1rem;
- letter-spacing:1px;
-}
-
-/* Gallery Grid */
-.gallery-grid{
- display:grid;
- grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
- gap:14px;
- margin-top:25px;
- padding:0 12px;
-}
-.gallery-grid video{
- width:100%;
- border-radius:10px;
- background:#000;
- box-shadow:0 0 15px #00aaff22;
-}
-
-/* Fullscreen Viewer */
-.fullscreen{
- position:fixed;
- inset:0;
- background:#000;
- display:flex;
- justify-content:center;
- align-items:center;
- z-index:9999;
-}
-.fullscreen video{
- height:100vh;
- width:auto;
- object-fit:contain;
-}
-.close-fs{
- position:absolute;
- top:20px;
- right:20px;
- font-size:2.5rem;
- color:#fff;
-}
-footer{
- text-align:center;
- padding:50px 0;
- opacity:0.5;
-}
-</style>
+    @media (orientation:landscape) {
+      .menu-toggle { min-height:40px; padding:9px 13px; }
+    }
+    @media (max-width:520px) {
+      .menu-toggle { font-size:.9rem; }
+      .menu-panel { width:min(275px, calc(100vw - 24px)); }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      * { animation:none !important; transition:none !important; }
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="namebar">CORNELIUS AURELIUS</div>
-<div class="ig-btn">
- <a href="https://www.instagram.com/cornelius_aurelius_/" target="_blank">Instagram</a>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="hero">
- <video id="heroVideo" autoplay muted playsinline>
-   <source src="36.mp4" type="video/mp4">
- </video>
-
- <div class="spotlight" id="spotlight"></div>
- <div class="tap-sound" id="tapSound">Tap to enable sound</div>
-</section>
-
-<div class="motto">KEEP • MOVING • FORWARD</div>
-
-<!-- TRAINING VIDEOS TITLE -->
-<div class="section-title">Training Videos</div>
-
-<!-- REELS FEED -->
-<section class="reels" id="reelsSection">
-
- <!-- Reels 1–10 -->
- <div class="reel"><video src="1.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="2.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="3.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="4.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="5.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="6.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="7.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="8.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="9.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
- <div class="reel"><video src="10.mp4" playsinline muted></video></div>
- <div class="gallery-btn"><button onclick="scrollToGallery()">VIEW FULL GALLERY</button></div>
-
-</section>
-
-<!-- GALLERY -->
-<div class="section-title" id="gallery">Video Gallery</div>
-
-<section class="gallery-grid">
-
-<!-- FULL VIDEO LIST (1–50) -->
-<script>
-for(let i=1;i<=50;i++){
- document.write(`<video src="${i}.mp4" playsinline muted></video>`);
-}
-</script>
-
-</section>
-
-<footer>© 2025 Cornelius Aurelius – The Omniscientrix</footer>
-
-<script>
-/* HERO SOUND */
-const heroVideo=document.getElementById("heroVideo");
-const tapSound=document.getElementById("tapSound");
-const spotlight=document.getElementById("spotlight");
-let soundEnabled=false;
-
-hero.addEventListener("click",()=>{
- if(!soundEnabled){
-   heroVideo.muted=false;
-   heroVideo.play();
-   tapSound.style.display="none";
-   spotlight.style.opacity="1";
-   setTimeout(()=>spotlight.style.opacity="0",1200);
-   soundEnabled=true;
- } else {
-   heroVideo.paused?heroVideo.play():heroVideo.pause();
- }
-});
-
-/* Spotlight scroll fade */
-window.addEventListener("scroll",()=>{
- if(window.scrollY>20){
-   spotlight.style.opacity="0";
- }
-});
-
-/* REELS AUTO PLAY */
-const reelVideos=document.querySelectorAll(".reel video");
-const reelObserver=new IntersectionObserver(entries=>{
- entries.forEach(entry=>{
-   const v=entry.target;
-   if(entry.isIntersecting){
-     v.classList.add("reveal");
-     v.play().catch(()=>{});
-   } else {
-     v.pause();
-   }
- });
-},{threshold:0.6});
-reelVideos.forEach(v=>reelObserver.observe(v));
-
-/* Tap to toggle sound + play */
-reelVideos.forEach(v=>{
- v.addEventListener("click",()=>{
-   v.paused?v.play():v.pause();
-   v.muted=!v.muted;
- });
-});
-
-/* Scroll to gallery */
-function scrollToGallery(){
- document.getElementById("gallery").scrollIntoView({behavior:"smooth"});
-}
-
-/* FULLSCREEN VIEWER */
-const galleryVideos=document.querySelectorAll(".gallery-grid video");
-let fsDiv=null;
-let currentIndex=0;
-
-function openFullscreen(i){
- currentIndex=i;
- fsDiv=document.createElement("div");
- fsDiv.className="fullscreen";
-
- const closeBtn=document.createElement("div");
- closeBtn.className="close-fs";
- closeBtn.textContent="×";
- closeBtn.onclick=closeFullscreen;
-
- const newVid=galleryVideos[i].cloneNode(true);
- newVid.autoplay=true;
- newVid.muted=false;
-
- fsDiv.appendChild(closeBtn);
- fsDiv.appendChild(newVid);
- document.body.appendChild(fsDiv);
-
- enableSwipe(fsDiv,newVid);
-}
-
-function closeFullscreen(){ if(fsDiv) fsDiv.remove(); }
-
-/* Click gallery videos */
-galleryVideos.forEach((v,i)=>v.addEventListener("click",()=>openFullscreen(i)));
-
-function enableSwipe(container,vid){
- let startY=0,endY=0;
- container.addEventListener("touchstart",e=>startY=e.touches[0].clientY);
- container.addEventListener("touchmove",e=>endY=e.touches[0].clientY);
- container.addEventListener("touchend",()=>{
-   const diff=endY-startY;
-   if(Math.abs(diff)>40){
-     if(diff>0) closeFullscreen();
-     else nextFullscreen();
-   }
- });
-}
-
-function nextFullscreen(){
- currentIndex=(currentIndex+1)%galleryVideos.length;
- closeFullscreen();
- openFullscreen(currentIndex);
-}
-</script>
-
- <footer>
-  <div style="text-align:center; margin-bottom:20px;">
-
-    <a href="https://corneliusaurelius.com/" target="_blank" style="color:#00aaff; text-decoration:none; display:block; margin:6px;">
-      🌐 Official Website
-    </a>
-
-    <a href="https://medium.com/@138licensing" target="_blank" style="color:#00aaff; text-decoration:none; display:block; margin:6px;">
-      ✍️ Medium Articles
-    </a>
-
-    <a href="mailto:138licensing@gmail.com" style="color:#00aaff; text-decoration:none; display:block; margin:6px;">
-      📩 Email: 138licensing@gmail.com
-    </a>
-
-    <a href="https://zenodo.org/records/17362534" target="_blank" style="color:#00aaff; text-decoration:none; display:block; margin:6px;">
-      🧬 Zenodo Research Archive
-    </a>
-
-    <a href="https://www.instagram.com/cornelius_aurelius_/" target="_blank" style="color:#00aaff; text-decoration:none; display:block; margin:6px;">
-      📸 Instagram
-    </a>
-
-    <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/" target="_blank" style="color:#00aaff; text-decoration:none; display:block; margin:6px;">
-      💼 LinkedIn
-    </a>
-
+  <div class="menu-wrap">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel">Content of Cornelius Aurelius <span aria-hidden="true">☰</span></button>
+    <nav class="menu-panel" id="menuPanel" aria-label="Content of Cornelius Aurelius menu">
+      <a href="https://corneliusaurelius.com/">Home Page <span aria-hidden="true">↗</span></a>
+      <a href="https://www.instagram.com/cornelius_aurelius_/">Instagram <span aria-hidden="true">↗</span></a>
+      <a class="tip" href="https://buy.stripe.com/28E00jbRIfz8aLI7TGco000">Tip Cornelius <span aria-hidden="true">↗</span></a>
+    </nav>
   </div>
 
-  <div style="opacity:0.5; text-align:center; margin-top:30px;">
-    © 2025 Cornelius Aurelius – The Omniscientrix
-  </div>
-</footer>
+  <main id="feed" aria-label="Cornelius Aurelius 9:16 content feed"></main>
 
- 
+  <footer class="footer">Cornelius Aurelius</footer>
+
+  <noscript>
+    <section class="reel"><div class="media-shell"><video src="36.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="1.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="2.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="3.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="4.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="5.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="6.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="7.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="8.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="9.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="10.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="11.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="12.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="13.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="14.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="15.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="16.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="17.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="18.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="19.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="20.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="21.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="22.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="23.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="24.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="25.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="26.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="27.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="28.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="29.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="30.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="31.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="32.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="33.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="34.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="35.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="37.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="38.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="39.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="40.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="41.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="42.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="43.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="44.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="45.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="46.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="47.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="48.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="49.mp4" playsinline muted preload="metadata"></video></div></section>
+    <section class="reel"><div class="media-shell"><video src="50.mp4" playsinline muted preload="metadata"></video></div></section>
+  </noscript>
+
+  <div class="sr-only-index" aria-hidden="true" id="crawlableIndex"></div>
+
+  <script>
+    const mediaFiles = [
+      '36.mp4',
+      '1.mp4',
+      '2.mp4',
+      '3.mp4',
+      '4.mp4',
+      '5.mp4',
+      '6.mp4',
+      '7.mp4',
+      '8.mp4',
+      '9.mp4',
+      '10.mp4',
+      '11.mp4',
+      '12.mp4',
+      '13.mp4',
+      '14.mp4',
+      '15.mp4',
+      '16.mp4',
+      '17.mp4',
+      '18.mp4',
+      '19.mp4',
+      '20.mp4',
+      '21.mp4',
+      '22.mp4',
+      '23.mp4',
+      '24.mp4',
+      '25.mp4',
+      '26.mp4',
+      '27.mp4',
+      '28.mp4',
+      '29.mp4',
+      '30.mp4',
+      '31.mp4',
+      '32.mp4',
+      '33.mp4',
+      '34.mp4',
+      '35.mp4',
+      '37.mp4',
+      '38.mp4',
+      '39.mp4',
+      '40.mp4',
+      '41.mp4',
+      '42.mp4',
+      '43.mp4',
+      '44.mp4',
+      '45.mp4',
+      '46.mp4',
+      '47.mp4',
+      '48.mp4',
+      '49.mp4',
+      '50.mp4'
+    ];
+
+    const feed = document.getElementById('feed');
+    const menuToggle = document.getElementById('menuToggle');
+    const menuPanel = document.getElementById('menuPanel');
+    const crawlableIndex = document.getElementById('crawlableIndex');
+    let activeVideo = null;
+    let soundVideo = null;
+
+    function makeUrl(file) {
+      return new URL(file, window.location.href).href;
+    }
+
+    function createReel(file, index) {
+      const section = document.createElement('section');
+      section.className = 'reel';
+      section.setAttribute('data-index', String(index + 1));
+      section.setAttribute('aria-label', `Cornelius Aurelius 9:16 content ${index + 1}`);
+
+      const shell = document.createElement('div');
+      shell.className = 'media-shell';
+
+      const video = document.createElement('video');
+      video.setAttribute('playsinline', '');
+      video.setAttribute('webkit-playsinline', '');
+      video.muted = true;
+      video.loop = true;
+      video.preload = index < 2 ? 'metadata' : 'none';
+      video.dataset.src = file;
+      video.title = `Cornelius Aurelius 9:16 video ${index + 1}`;
+      video.setAttribute('aria-label', `Cornelius Aurelius 9:16 video ${index + 1}`);
+
+      const dot = document.createElement('span');
+      dot.className = 'sound-dot';
+      dot.setAttribute('aria-hidden', 'true');
+
+      video.addEventListener('click', () => {
+        if (soundVideo && soundVideo !== video) {
+          soundVideo.muted = true;
+          soundVideo.closest('.reel')?.classList.remove('sound-on');
+        }
+        video.muted = !video.muted;
+        if (!video.muted) {
+          soundVideo = video;
+          section.classList.add('sound-on');
+          video.play().catch(() => {});
+        } else {
+          section.classList.remove('sound-on');
+        }
+      });
+
+      shell.appendChild(video);
+      shell.appendChild(dot);
+      section.appendChild(shell);
+      return section;
+    }
+
+    function loadVideo(video) {
+      if (!video.dataset.src || video.src) return;
+      video.src = video.dataset.src;
+      video.load();
+    }
+
+    const fragment = document.createDocumentFragment();
+    mediaFiles.forEach((file, index) => fragment.appendChild(createReel(file, index)));
+    feed.appendChild(fragment);
+
+    crawlableIndex.innerHTML = mediaFiles.map((file, index) =>
+      `<a href="${file}">Cornelius Aurelius 9:16 video ${index + 1}</a>`
+    ).join(' ');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const reel = entry.target;
+        const video = reel.querySelector('video');
+        const index = Number(reel.dataset.index || 1) - 1;
+
+        if (entry.isIntersecting) {
+          loadVideo(video);
+          [index - 1, index + 1].forEach(i => {
+            const neighbour = feed.children[i]?.querySelector('video');
+            if (neighbour) loadVideo(neighbour);
+          });
+        }
+
+        if (entry.intersectionRatio >= 0.68) {
+          if (activeVideo && activeVideo !== video) activeVideo.pause();
+          activeVideo = video;
+          loadVideo(video);
+          video.play().catch(() => {});
+        } else if (entry.intersectionRatio < 0.18 && video !== soundVideo) {
+          video.pause();
+        }
+      });
+    }, { threshold:[0.12, 0.18, 0.68], rootMargin:'260px 0px 260px 0px' });
+
+    document.querySelectorAll('.reel').forEach(reel => observer.observe(reel));
+
+    menuToggle.addEventListener('click', () => {
+      const open = menuPanel.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    document.addEventListener('click', event => {
+      if (!menuPanel.contains(event.target) && !menuToggle.contains(event.target)) {
+        menuPanel.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        menuPanel.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+      if (!activeVideo) return;
+      if (event.key === ' ') {
+        event.preventDefault();
+        activeVideo.paused ? activeVideo.play().catch(() => {}) : activeVideo.pause();
+      }
+    });
+
+    const rootUrl = window.location.href.split('#')[0];
+    const pageUrl = rootUrl.endsWith('/') ? rootUrl : rootUrl.substring(0, rootUrl.lastIndexOf('/') + 1);
+    const videoObjects = mediaFiles.map((file, index) => ({
+      '@type':'VideoObject',
+      name:`Cornelius Aurelius 9:16 Video ${index + 1}`,
+      description:'Official 9:16 video content of Cornelius Aurelius.',
+      contentUrl: makeUrl(file),
+      uploadDate:'2026-05-24',
+      width:1080,
+      height:1920,
+      thumbnailUrl: makeUrl('cornelius-aurelius-video-thumbnail.jpg'),
+      creator:{'@type':'Person', name:'Cornelius Aurelius', url:'https://corneliusaurelius.com/'}
+    }));
+
+    const schema = {
+      '@context':'https://schema.org',
+      '@graph':[
+        {
+          '@type':'Person',
+          '@id':'https://corneliusaurelius.com/#person',
+          name:'Cornelius Aurelius',
+          alternateName:['Cornelious Aurelius','Cornelius Aurielius','Cornelius Aurelias','Cornelius Aureluis'],
+          url:'https://corneliusaurelius.com/',
+          sameAs:['https://www.instagram.com/cornelius_aurelius_/']
+        },
+        {
+          '@type':'CollectionPage',
+          name:'Cornelius Aurelius Content',
+          description:'Official fast-loading 9:16 videos and visual content of Cornelius Aurelius.',
+          url:rootUrl,
+          mainEntity:{'@id':'https://corneliusaurelius.com/#person'},
+          hasPart:videoObjects
+        },
+        {
+          '@type':'ItemList',
+          name:'Cornelius Aurelius 9:16 Video Index',
+          itemListElement:videoObjects.map((item, index) => ({
+            '@type':'ListItem',
+            position:index + 1,
+            item
+          }))
+        }
+      ]
+    };
+
+    const schemaScript = document.createElement('script');
+    schemaScript.type = 'application/ld+json';
+    schemaScript.textContent = JSON.stringify(schema);
+    document.head.appendChild(schemaScript);
+  </script>
 </body>
 </html>
